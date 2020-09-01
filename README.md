@@ -1,7 +1,7 @@
 # CMPS 2200  Recitation 02
 
-**Name (Team Member 1):**_________________________  
-**Name (Team Member 2):**_________________________
+**Name (Team Member 1):**Kaitlyn Cooney 
+**Name (Team Member 2):**Dot Wetmore
 
 In this recitation, we will investigate recurrences. 
 To complete this recitation, follow the instructions in this document. Some of your answers will go in this file, and others will require you to edit `main.py`.
@@ -47,6 +47,47 @@ where $W(1) = 1$.
 - [ ] 3. (2 point) Now implement `work_calc`, which generalizes the above so that we can now input $a$, $b$ and a *function* $f(n)$ as arguments. Test this code by completing the test cases in `test_work` and adding 3 more cases.
 
 - [ ] 4. (2 point) Now, derive the asymptotic behavior of $W(n)$ using $f(n) = 1$, $f(n) = n$, and $f(n) = n^2$  with $a=2$ and $b=2$. Then, generate actual values for $W(n)$ for your code and confirm that the trends match your derivations.
+
+We compared functions f(n) = 1, n, and n^2 keeping a and b set to 2, and printed our results:
+
+fn1 = 1
+fn2 = n
+fn 3 = n^2
+
+compare fn1 and fn2
+|     n |   W_1 |    W_2 |
+|-------|-------|--------|
+|    10 |    15 |     36 |
+|    20 |    31 |     92 |
+|    50 |    63 |    276 |
+|   100 |   127 |    652 |
+|  1000 |  1023 |   9120 |
+|  5000 |  8191 |  61728 |
+| 10000 | 16383 | 133456 |
+
+compare fn1 and fn3
+
+|     n |   W_1 |       W_2 |
+|-------|-------|-----------|
+|    10 |    15 |       174 |
+|    20 |    31 |       748 |
+|    50 |    63 |      4790 |
+|   100 |   127 |     19580 |
+|  1000 |  1023 |   1990744 |
+|  5000 |  8191 |  49957880 |
+| 10000 | 16383 | 199915760 |
+
+compare fn2 and fn3
+
+|     n |    W_1 |       W_2 |
+|-------|--------|-----------|
+|    10 |     36 |       174 |
+|    20 |     92 |       748 |
+|    50 |    276 |      4790 |
+|   100 |    652 |     19580 |
+|  1000 |   9120 |   1990744 |
+|  5000 |  61728 |  49957880 |
+| 10000 | 133456 | 199915760 |
 
 **TODO: your answer goes here**
 
